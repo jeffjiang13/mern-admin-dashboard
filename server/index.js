@@ -37,16 +37,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-
-app.get("/", (req, res) =>
-  res
-    .status(200)
-    .send(
-      "<div><h1>Application Dashboard Backend</h1><p>MERN Stack Admin Dashboard. For frontend, using Material UI, Material UI Data Grid, Nivo Charts, Redux Toolkit and Redux Toolkit Query. For backend, Node JS, Express Js, Mongoose, and MongoDB.</p></div>"
-    )
-);
-
-
 /* ROUTES */
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
